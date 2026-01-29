@@ -1,9 +1,9 @@
 name: Terraform Deploy
 
 on:
-  push:
-    branches: [ main ]
-  # workflow_dispatch:   # ✅ Manual trigger only
+  # push:
+  #   branches: [ main ]
+  workflow_dispatch:   # ✅ Manual trigger only
 
 
 jobs:
@@ -24,7 +24,7 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
-
+    
       - name: Terraform Validate
         run: terraform validate
 
